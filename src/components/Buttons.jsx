@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
 
-function Buttons({name = "Button"}){
+function Buttons({name = "Button", className = "Button", type = ""}){
     return (
-        <div className='buttonBox'>
-            <button className='button' type='submit'>{name}</button>
-        </div>
+            <button className={className} type={type}>{name}</button>
     )
 }
 
-Buttons.propTypes = {  
-    name: PropTypes.string
+Buttons.propTypes = { 
+    name: PropTypes.string,
+    className: PropTypes.string,
+    type: PropTypes.string
 };
 
 export default Buttons;
