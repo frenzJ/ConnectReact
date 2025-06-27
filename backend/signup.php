@@ -20,13 +20,12 @@
         $sql = "INSERT INTO users1 (username, email, password) VALUES (?, ?, ?)";
         $stmt = mysqli_prepare($conn, $sql);
         $stmt->bind_param("sss", $username, $email, $hashed_password);
+        
         if ($stmt->execute()){
             echo json_encode(["status" => "success", "message" => "User saved successfully."]);
         }
-        else{
-            echo json_encode(["status" => "error", "message" => "Insert failed"]);
-        }
-    };
-    
+    }
+
+    $conn->close();   
 ?>
 

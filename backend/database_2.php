@@ -11,7 +11,7 @@
         $conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
     }
     catch (mysqli_sql_exception $e) {
-        echo json_encode(["status" => "error", "message" => "could not connect to database"]);
+        echo json_encode(["status" => "error", "message" => "Could not connect to database"]);
         exit(); 
     }
 ?>
