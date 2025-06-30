@@ -1,0 +1,22 @@
+.loginpBox {
+  border-radius: 20px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 50vh; 
+  width: 60vh;          
+}
+
+.inputs {
+  border-radius: 5px;
+  width: 200px;
+}
+
+.buttonBox {
+  text-align: center;
+}
+
+.inputBox {
+  margin-top: 40px;
+}

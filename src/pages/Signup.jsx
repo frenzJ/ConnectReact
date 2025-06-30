@@ -20,7 +20,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost/Practice/connect_react/backend/signup.php", {
+    const res = await fetch("http://localhost/Practice/ConnectReact/backend/signup.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
