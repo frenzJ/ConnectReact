@@ -10,12 +10,22 @@ function Login() {
         setData({...data, [e.target.name]: e.target.value});
     }
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        
-        
-        
-    }
+const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const res = await fetch("http://localhost/Practice/ConnectReact/backend/login.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+    setResponse(result.message)
+
+    setData({ username: "", password: "" });
+  };
 
 
 
